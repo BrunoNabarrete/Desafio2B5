@@ -48,6 +48,8 @@ Content-Type: application/json
   "valor": 80.00,
   "categoria": "alimentacao"
 }
+
+
 Atualizar Transação
 
 URL: /transacoes
@@ -69,6 +71,8 @@ Content-Type: application/json
   "valor": 80.00,
   "categoria": "alimentacao"
 }
+
+
 Deletar Transação
 
 URL: /transacoes
@@ -87,7 +91,8 @@ Spring Boot
 Spring Data JPA
 Hibernate
 MySQL
-Como Usar
+
+**Como Usar**
 
 Clone este repositório.
 Configure o banco de dados MySQL.
