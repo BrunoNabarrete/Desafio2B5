@@ -85,7 +85,8 @@ http
 Copy code
 DELETE /transacoes?id=1 HTTP/1.1
 Host: localhost:8080
-Tecnologias Utilizadas
+
+**Tecnologias Utilizadas**
 
 Spring Boot
 Spring Data JPA
