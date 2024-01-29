@@ -1,0 +1,83 @@
+<p>transacoes testando!</p>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>data</th>
+        <th>valor</th>
+        <th>categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transacoes of listaTransacoes; index as i">
+        
+        <td>{{transacoes.id}}</td>
+        <td>{{transacoes.data}}</td>
+        <td>{{transacoes.valor}}</td>
+        <td>{{transacoes.categoria}}</td>
+        <td>
+          <button (click)="deletarTransacao(transacoes.id)">Delete</button>
+          <button (click)="selecionarTransacao(transacoes)">Editar</button>
+          <button (click)="somarPorCategoria(transacoes.categoria!)">SomarCategoria</button>
+          <button (click)="filtrarPorData(transacoes.data!)">Filtrar por data</button>
+          <button (click)="limparFiltro()">Limpar filtro Data </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <div>Total por categoria:</div>
+  <div>{{categoriaSelecionada}}</div>
+  <div>{{totalPorCategoria}}</div>
+
+  <br>
+
+  <div>Alterar informacoes:</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>data</th>
+        <th>valor</th>
+        <th>categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="transacaoSelecionada.id">
+        <td>data</td>
+        <td>
+          <input type="text" [(ngModel)]="transacaoSelecionada!.data" name="data" />
+        </td>
+        <td>Valor</td>
+        <td>
+          <input type="text" [(ngModel)]="transacaoSelecionada!.valor" name="valor" />
+        </td>
+        <td>Categoria</td>
+        <td>
+          <input type="text" [(ngModel)]="transacaoSelecionada!.categoria" name="categoria" />
+        </td>
+        <td>
+          <button (click)="editarTransacao(transacaoSelecionada)">Salvar</button>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <div>Inserir nova transacao:</div>
+  <input type="text" [(ngModel)]="transacao.categoria" placeholder="Categoria" name="categoria" />
+  <input type="text" [(ngModel)]="transacao.data" placeholder="Data" name="data" />
+  <input type="text" [(ngModel)]="transacao.valor" placeholder="Valor" name="valor" />
+  <button (click)="adicionarTransacao(transacao)">Inserir</button>
+  
+  <br>
+  <textarea rows="4" cols="50" [(ngModel)]="listaDeTransacoes" name="listaTransacoes"  placeholder="Adicionar Transações em Lote"></textarea>
+  <button (click)="adicionarTransacoesEmLote(listaDeTransacoes)">Inserir em Lote</button>
+
+
+
+</div>
+<!-- <app-form-transacao [transacao]="transacaoSelecionada" ></app-form-transacao> -->
