@@ -10,8 +10,6 @@ Este projeto consiste em uma aplicação para gerenciamento de transações.
 - [Endpoints](#endpoints)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Usar](#como-usar)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 
 **Sobre**
 
